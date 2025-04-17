@@ -1,0 +1,55 @@
+{
+    "name": "dvarilek/livewire-closure-synthesizer",
+    "description": "A Closure Synthesizer for Laravel Livewire",
+    "keywords": [
+        "livewire",
+        "closure",
+        "synth",
+        "synthesizer"
+    ],
+    "type": "library",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Dvarilek\\ClosureSynthesizer\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Tests\\": "tests"
+        }
+    },
+    "authors": [
+        {
+            "name": "David Vařílek",
+            "email": "davan@outlook.cz"
+        }
+    ],
+    "require": {
+        "laravel/serializable-closure": "^v1.1.0",
+        "livewire/livewire": "^3.0"
+    },
+    "require-dev": {
+        "pestphp/pest": "^2.31|^3.0.0",
+        "phpstan/phpstan": "^2.1",
+        "orchestra/testbench": "^10.2"
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Dvarilek\\ClosureSynthesizer\\ClosureSynthesizerServiceProvider"
+            ]
+        }
+    },
+    "scripts": {
+        "test": "vendor/bin/pest",
+        "stan": "vendor/bin/phpstan analyse src --level=6",
+        "test-coverage": "vendor/bin/pest --coverage"
+    },
+    "minimum-stability": "stable",
+    "config": {
+        "allow-plugins": {
+            "pestphp/pest-plugin": true
+        }
+    }
+}
